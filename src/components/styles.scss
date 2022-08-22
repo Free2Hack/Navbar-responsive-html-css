@@ -8,7 +8,9 @@
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 18px;
 }
-
+body{
+    background-color: rgb(20, 20, 20);
+}
 .App{
     height: 100vh;
     background-color: rgb(20, 20, 20);
@@ -94,6 +96,39 @@
     }
     #check:checked~ul{
         left:0;
-        
+        z-index: 10000;
     }
 }
+.eyes{
+    animation: left-to-right 1s forwards infinite 0s alternate;
+}
+.eyes:hover{
+    animation-play-state: paused;
+}
+
+@keyframes left-to-right{
+    from { transform: translateX(-25%) translateY(0%) }
+    to   { transform: translateX(100%) translateY(10%); }
+   
+}
+
+#img{
+    animation: rotate-logo 6s infinite linear forwards 0s;
+}
+@keyframes rotate-logo{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+// label::after{
+//     content: '*';
+//     color: red;
+// }
+
+// label:hover::before{
+//     content:attr(data);
+//     position:absolute;
+//     border:2px solid green;
+//     bottom:30px;
+//     left:-25px
+// }

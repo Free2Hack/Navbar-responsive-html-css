@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./styles.scss";
+import logo from '../react_logo.png'
 
 const Header = () => {
   return (
@@ -8,7 +9,7 @@ const Header = () => {
       <nav className="navbar">
         <input type={'checkbox'} id="check" />
         <label className="fa fa-bars" htmlFor="check"></label>
-        <div className="logo">My Logo</div>
+        <div className="logo" style={{}}><img id="img" src={logo} width="50px" alt="Logo" style={{position:"relative", top:"12px"}} /></div>
         <ul>
           <li>
             <Link to={"/home"}>
